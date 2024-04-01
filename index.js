@@ -8,12 +8,13 @@ const { logger } = require('./middleware/logEvents');
 const credentials = require('./middleware/credentials');
 const verifyJWT = require('./middleware/verifyJWT');
 const errorHandler = require('./middleware/errorHandler');
+const corsOptions = require('./config/corsOptions');
 const port = 3001;
 
 
 app.use(logger);
 app.use(credentials);
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
