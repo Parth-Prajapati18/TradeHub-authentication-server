@@ -12,7 +12,7 @@ const port = 3001;
 
 
 app.use(logger);
-app.use(credentials);
+// app.use(credentials);
 app.use(cors());
 
 app.use(express.urlencoded({ extended: false }));
