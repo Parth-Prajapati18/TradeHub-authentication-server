@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../../config/db');
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
     const userId = req.body.userId;  
     
     if (!userId) {
